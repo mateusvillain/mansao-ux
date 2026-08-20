@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Contraste verificado contra --color-bg e --color-surface (AA em texto normal). */
+  --color-bg: 252 249 245;
+  --color-surface: 255 255 255;
+  --color-border: 232 225 216;
+  --color-ink: 28 25 23;
+  --color-muted: 106 98 90;
+  --color-brand: 180 60 45;
+  --color-brand-ink: 255 255 255;
+  --color-accent: 22 101 92;
+  --color-danger: 176 32 32;
+}
+
+html {
+  /* Evita zoom involuntário em input no iOS e mantém a home sem salto de scroll. */
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: rgb(var(--color-bg));
+  color: rgb(var(--color-ink));
+  /* Nenhuma tela do app rola na horizontal — critério de aceite da #13. */
+  overflow-x: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
