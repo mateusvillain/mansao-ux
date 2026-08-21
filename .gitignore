@@ -11,3 +11,6 @@ next-env.d.ts
 .env*.local
 
 .vercel
+.env*
+# Exceção: o template vazio precisa continuar versionado.
+!.env.example
