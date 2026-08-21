@@ -15,6 +15,11 @@ permite as issues de UI serem implementadas em paralelo com a camada de dados (#
 Não há login. O `id` é guardado no dispositivo após o primeiro acesso (#12) e é o que
 dá autoria a perfis, recados, músicas e votos.
 
+Tem policy de `update` (migration `20260821012000`) para permitir corrigir um nome
+digitado errado — sem ela, o registro errado ficaria para sempre na lista de escolha dos
+próximos hóspedes. Continua sem `delete`: apagar um hóspede deixaria órfãos perfis, recados e
+músicas por cascade, e nenhuma issue do v1 pede isso.
+
 ### `profiles` — Perfil Relâmpago (#16, #17, #18)
 | coluna | tipo | notas |
 |---|---|---|
