@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "skills": {
+    "code-review": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/code-review/SKILL.md",
+      "computedHash": "caa9a086baaf9e0f7cd71f64edfa83da6821c05e826b083221f3d02e3d6a1905"
+    },
+    "frontend-design": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "skillPath": "skills/frontend-design/SKILL.md",
+      "computedHash": "4eabc66183767153e404b39d1b839b1c37f2d82d86f0a0d7e880a579d8d62336"
+    },
+    "motion-ui": {
+      "source": "affaan-m/ecc",
+      "sourceType": "github",
+      "skillPath": "skills/motion-ui/SKILL.md",
+      "computedHash": "63411a4e8804b8ede6e7647de461563fdf1b04e90a1fa165d2aca4f4d673e046"
+    }
+  }
+}
