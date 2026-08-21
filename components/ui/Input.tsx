@@ -15,7 +15,7 @@ export function Input({ label, hint, id, className = "", ...props }: Props) {
       <input
         id={inputId}
         className={[
-          "min-h-touch rounded-card border border-border bg-surface px-4 text-base text-ink",
+          "min-h-touch rounded-card border border-border-strong bg-surface px-4 text-base text-ink",
           "placeholder:text-muted focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20",
           className,
         ].join(" ")}

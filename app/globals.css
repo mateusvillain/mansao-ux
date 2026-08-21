@@ -3,10 +3,15 @@
 @tailwind utilities;
 
 :root {
-  /* Contraste verificado contra --color-bg e --color-surface (AA em texto normal). */
+  /* Contraste medido: ink 17.5:1, muted 6.0:1, accent 6.9:1, danger 6.8:1 e
+     brand-ink sobre brand 5.8:1 — todos AA para texto normal. */
   --color-bg: 252 249 245;
   --color-surface: 255 255 255;
   --color-border: 232 225 216;
+  /* Separador decorativo (border) vs. limite de componente interativo
+     (border-strong): o segundo precisa de 3:1 por WCAG 1.4.11 — 3.30:1
+     contra --color-surface. */
+  --color-border-strong: 150 140 130;
   --color-ink: 28 25 23;
   --color-muted: 106 98 90;
   --color-brand: 180 60 45;

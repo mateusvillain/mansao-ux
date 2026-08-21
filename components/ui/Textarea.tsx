@@ -16,7 +16,7 @@ export function Textarea({ label, counter, id, className = "", ...props }: Props
       <textarea
         id={fieldId}
         className={[
-          "min-h-[6rem] rounded-card border border-border bg-surface p-4 text-base text-ink",
+          "min-h-[6rem] rounded-card border border-border-strong bg-surface p-4 text-base text-ink",
           "placeholder:text-muted focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20",
           className,
         ].join(" ")}
