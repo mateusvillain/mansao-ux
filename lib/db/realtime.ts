@@ -1,4 +1,4 @@
-import type { RealtimeTable } from "@/lib/supabase/database.types";
+import type { RealtimeTable } from "@/lib/supabase/types";
 import { supabase } from "@/lib/supabase/client";
 
 /**

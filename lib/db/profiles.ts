@@ -1,5 +1,5 @@
 import { requireClient } from "@/lib/supabase/client";
-import type { Guest, Profile } from "@/lib/supabase/database.types";
+import type { Guest, Profile } from "@/lib/supabase/types";
 
 import { unwrap } from "./errors";
 

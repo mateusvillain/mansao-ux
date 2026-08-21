@@ -1,5 +1,5 @@
 import { requireClient } from "@/lib/supabase/client";
-import type { Vote } from "@/lib/supabase/database.types";
+import type { Vote } from "@/lib/supabase/types";
 
 import { unwrap } from "./errors";
 
