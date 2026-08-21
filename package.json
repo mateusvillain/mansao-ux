@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "types:db": "supabase gen types typescript --project-id \"$SUPABASE_PROJECT_ID\" > lib/supabase/database.types.ts"
+    "types:db": "set -a && . ./.env.local && set +a && npx --yes supabase@latest gen types typescript --project-id \"$SUPABASE_PROJECT_ID\" > lib/supabase/database.types.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.45.0",
