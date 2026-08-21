@@ -5,7 +5,7 @@ Relâmpago, Mural de Recados e Playlist Colaborativa.
 
 - **PRD:** [Wiki › Mansão UX](https://github.com/mateusvillain/mansao-ux/wiki/Mansao-UX)
 - **Plano de execução:** [Milestone Mansão UX — v1](https://github.com/mateusvillain/mansao-ux/milestone/1)
-- **Produção:** _a definir na issue #10_
+- **Produção:** https://mansao-ux-mateus-villains-projects.vercel.app
 
 ## Stack
 
