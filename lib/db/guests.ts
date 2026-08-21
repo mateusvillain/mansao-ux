@@ -28,3 +28,17 @@ export async function getGuest(id: string): Promise<Guest | null> {
   const result = await client.from("guests").select("*").eq("id", id).maybeSingle();
   return result.data;
 }
+
+/**
+ * Renomeia o hóspede. Existe para corrigir um nome digitado errado no primeiro
+ * acesso — sem isso ele viraria registro permanente na lista de escolha dos
+ * outros (ver migration 20260821012000).
+ *
+ * Lança `DbError` com `isDuplicate` se o novo nome já pertence a outra pessoa.
+ */
+export async function renameGuest(id: string, name: string): Promise<Guest> {
+  const client = requireClient();
+  return unwrap(
+    await client.from("guests").update({ name: name.trim() }).eq("id", id).select().single()
+  );
+}
