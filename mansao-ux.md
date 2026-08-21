@@ -9,21 +9,13 @@
 | Informação | Detalhes |
 |---|---|
 | **Nome da casa** | Mansão UX |
-| **Endereço** | _[preencher endereço completo]_ |
-| **Localização (mapa)** | _[colar link do Google Maps]_ |
-| **Distância até o evento** | _[ex: 12 min de carro / 25 min a pé / 1 estação de metrô]_ |
-| **Check-in** | 24/09 — _[horário]_ |
-| **Check-out** | 27/09 — _[horário]_ |
-| **Anfitrião / responsável pela reserva** | _[nome]_ |
-| **Wi-Fi** | _[rede / senha]_ |
-| **Contato de emergência** | _[nome + telefone]_ |
-
-### Como chegar
-- **Do aeroporto:** _[instruções]_
-- **Do centro de convenções:** _[instruções]_
-- **App de transporte sugerido:** _[Uber / 99 / transporte público]_
-
----
+| **Endereço** | Tv. Luís Rosseti, 3-47 — Azenha, Porto Alegre - RS, 90130-070 |
+| **Localização (mapa)** | https://maps.app.goo.gl/KXTXz8XErwHHFD157 |
+| **Distância até o evento** | 11 min de carro |
+| **Check-in** | 24/09 |
+| **Check-out** | 27/09 |
+| **Anfitrião / responsável pela reserva** | Thoz |
+| **Wi-Fi** | _a informar na chegada_ |
 
 ## 👥 Quem vai estar na casa
 
@@ -86,7 +78,12 @@ Ideias de apps leves e rápidos de construir, organizados por objetivo. Todos po
 
 ## ✅ Próximos passos
 
-- [ ] Preencher dados da casa (endereço, mapa, distância, wi-fi)
+- [x] Preencher dados da casa (endereço, mapa, distância) — falta só a senha do wi-fi
 - [ ] Confirmar lista final de hóspedes
-- [ ] Escolher 1–2 micro apps para prototipar primeiro
-- [ ] Compartilhar este documento com o grupo antes do dia 24/09
+- [x] Escolher micro apps para prototipar — Perfil Relâmpago, Mural de Recados e Playlist Colaborativa
+- [ ] Compartilhar o **app** com o grupo antes do dia 24/09
+
+> ℹ️ Este documento deixou de ser a fonte da verdade das infos da casa. O app é:
+> https://mansao-ux-mateus-villains-projects.vercel.app
+> O planejamento vive no [PRD](https://github.com/mateusvillain/mansao-ux/wiki/Mansao-UX)
+> e no [milestone Mansão UX — v1](https://github.com/mateusvillain/mansao-ux/milestone/1).

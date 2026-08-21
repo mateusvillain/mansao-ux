@@ -1,23 +1,18 @@
 /**
- * Conteúdo da casa — fonte única, editável sem mexer em componente (#14).
+ * Conteúdo da casa — fonte única, editável sem mexer em componente (#14, #15).
  *
- * Os campos marcados como `null` ainda estão em aberto no `mansao-ux.md` e
- * dependem do anfitrião: é exatamente o que a issue #15 vai preencher. A home
- * omite a seção correspondente quando o valor é `null`, em vez de mostrar
- * "[preencher]" para o grupo.
+ * Campos `null` seguem em aberto. A home omite a seção correspondente em vez de
+ * mostrar "[preencher]" para o grupo, e `pendencias()` lista só o que de fato
+ * ainda é esperado — o que o anfitrião dispensou não entra na lista.
  */
 export type Casa = {
   nome: string;
-  periodo: { checkIn: string; checkOut: string; horaCheckIn: string | null; horaCheckOut: string | null };
+  periodo: { checkIn: string; checkOut: string };
   endereco: string | null;
   mapaUrl: string | null;
   distanciaEvento: string | null;
   anfitriao: string | null;
-  wifi: { rede: string; senha: string } | null;
-  emergencia: { nome: string; telefone: string } | null;
-  comoChegar: { doAeroporto: string | null; doCentroDeConvencoes: string | null; appSugerido: string | null };
-  combinados: string[];
-  levar: string[];
+  wifi: { rede: string | null; senha: string | null } | null;
 };
 
 export const casa: Casa = {
@@ -25,33 +20,25 @@ export const casa: Casa = {
   periodo: {
     checkIn: "24/09",
     checkOut: "27/09",
-    horaCheckIn: null,
-    horaCheckOut: null,
   },
-  endereco: null,
-  mapaUrl: null,
-  distanciaEvento: null,
-  anfitriao: null,
+  endereco: "Tv. Luís Rosseti, 3-47 — Azenha, Porto Alegre - RS, 90130-070",
+  mapaUrl: "https://maps.app.goo.gl/KXTXz8XErwHHFD157",
+  distanciaEvento: "11 min de carro",
+  anfitriao: "Thoz",
+  // Rede e senha ainda desconhecidas — a casa informa na chegada.
   wifi: null,
-  emergencia: null,
-  comoChegar: {
-    doAeroporto: null,
-    doCentroDeConvencoes: null,
-    appSugerido: null,
-  },
-  combinados: [],
-  levar: [],
 };
 
-/** Campos ainda pendentes — a home usa para avisar em vez de fingir que está pronto. */
+/**
+ * O que ainda falta preencher. Só entra aqui o que o grupo espera ver: contato
+ * de emergência, instruções de como chegar e combinados da casa foram
+ * dispensados pelo anfitrião nesta iteração, então não contam como pendência.
+ */
 export function pendencias(c: Casa): string[] {
   const faltando: string[] = [];
   if (!c.endereco) faltando.push("endereço");
   if (!c.mapaUrl) faltando.push("link do mapa");
   if (!c.distanciaEvento) faltando.push("distância até o evento");
-  if (!c.periodo.horaCheckIn || !c.periodo.horaCheckOut) faltando.push("horários de check-in/out");
-  if (!c.wifi) faltando.push("wi-fi");
-  if (!c.emergencia) faltando.push("contato de emergência");
-  if (c.combinados.length === 0) faltando.push("combinados");
+  if (!c.wifi?.senha) faltando.push("senha do wi-fi");
   return faltando;
 }
